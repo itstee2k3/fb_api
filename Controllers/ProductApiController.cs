@@ -1,8 +1,8 @@
-using api.Models;
-using api.Repositories;
+using api_bui_xuan_thang.Models;
+using api_bui_xuan_thang.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
-namespace api.Controllers;
+namespace api_bui_xuan_thang.Controllers;
 [Route("api/[controller]")]
 [ApiController]
 
@@ -69,7 +69,7 @@ public class ProductApiController : ControllerBase
             if (id != product.Id)
                 return BadRequest();
             await _productRepository.UpdateProductAsync(product);
-            return NoContent();
+                return NoContent();
         }
         catch (Exception ex)
         {
@@ -77,8 +77,9 @@ public class ProductApiController : ControllerBase
             return StatusCode(500, "Internal server error");
         }
     }
-    [
-    HttpDelete("{id}")]
+    
+    
+    [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteProduct(int id)
     {
         try

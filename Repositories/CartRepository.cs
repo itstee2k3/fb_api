@@ -1,7 +1,7 @@
-using api.Models;
+using api_bui_xuan_thang.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace api.Repositories;
+namespace api_bui_xuan_thang.Repositories;
 
 public class CartRepository : ICartRepository
 {
@@ -12,7 +12,6 @@ public class CartRepository : ICartRepository
         _context = context;
     }
 
-    // 1. Lấy giỏ hàng của người dùng theo UserId
     // 1. Lấy giỏ hàng của người dùng theo UserId
     public async Task<List<Cart>> GetCartByIdUserAsync(string idUser)
     {

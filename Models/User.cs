@@ -1,12 +1,13 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace api.Models;
+namespace api_bui_xuan_thang.Models;
 
 public class User : IdentityUser
 {
-    // Bạn có thể thêm các thuộc tính bổ sung tại đây
-    public string? FullName { get; set; } // Tên đầy đủ (tùy chọn)
-    public DateTime CreatedAt { get; set; } = DateTime.UtcNow; // Thời gian tạo người dùng
+    public string? FullName { get; set; } 
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    public string? Avatar { get; set; }
+    public string? Initials { get; set; }
 }
 
 // INSERT INTO [User] 

@@ -1,6 +1,6 @@
-using api.Models;
+using api_bui_xuan_thang.Models;
 
-namespace api.Repositories;
+namespace api_bui_xuan_thang.Repositories;
 
 public interface IProductRepository
 {

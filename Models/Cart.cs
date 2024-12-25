@@ -1,4 +1,4 @@
-namespace api.Models;
+namespace api_bui_xuan_thang.Models;
 
 public class Cart
 {

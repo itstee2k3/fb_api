@@ -1,9 +1,9 @@
-using api.Models;
+using api_bui_xuan_thang.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 using System.Text;
 
-namespace api.Repositories;
+namespace api_bui_xuan_thang.Repositories;
 
 public class ProductRepository : IProductRepository
 {

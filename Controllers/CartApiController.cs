@@ -1,9 +1,9 @@
-using api.Models;
-using api.Repositories;
-using api.DTOs; // Thêm không gian tên chứa DTO
+using api_bui_xuan_thang.Models;
+using api_bui_xuan_thang.Repositories;
+using api_bui_xuan_thang.DTOs; // Thêm không gian tên chứa DTO
 using Microsoft.AspNetCore.Mvc;
 
-namespace api.Controllers
+namespace api_bui_xuan_thang.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -25,7 +25,7 @@ namespace api.Controllers
                 var carts = await _cartRepository.GetCartByIdUserAsync(idUser);
                 if (carts == null || carts.Count == 0)
                 {
-                    return NotFound(new { message = "Giỏ hàng không tồn tại." });
+                    return Ok(new { message = "Không tìm thấy sản phẩm trong giỏ hàng." });
                 }
                 return Ok(carts);
             }
